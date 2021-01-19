@@ -1,0 +1,17 @@
+@import "styles/bem.scss";
+@import "styles/mixins.scss";
+
+#{ bem-element(FocusableStory, test) } {
+  @include position(relative, $width: 200px, $height: 200px);
+  background: #efefef;
+
+  &:before {
+    @include position(absolute, 50%, 50%);
+
+    content: "Click me";
+    transform: translate3d(-50%, -50%, 0);
+    font-size: 24px;
+    font-weight: bold;
+    color: #bbb;
+  }
+}

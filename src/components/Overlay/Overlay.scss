@@ -1,0 +1,78 @@
+@import "styles/bem.scss";
+@import "styles/mixins.scss";
+
+#{ bem-block(Overlay) } {
+  position: relative;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+#{ bem-element(Overlay, ghost) } {
+  position: fixed;
+  pointer-events: none;
+  overflow: visible;
+
+}
+
+#{ bem-element(Overlay, wrapper) } {
+  @include position(fixed, 0, 0, 0, 0);
+  pointer-events: none;
+  background: rgba(255, 0, 0, .1);
+  border: 1px solid red;
+}
+
+#{ bem-element(Overlay, wrapper, leftLeft) } {
+  left: 0
+}
+
+#{ bem-element(Overlay, wrapper, leftCenter) } {
+  left: calc(50%);
+}
+
+#{ bem-element(Overlay, wrapper, leftRight) } {
+  left: calc(100%);
+}
+
+#{ bem-element(Overlay, wrapper, rightLeft) } {
+  right: calc(100%);
+}
+
+#{ bem-element(Overlay, wrapper, rightCenter) } {
+  right: calc(50%);
+}
+
+#{ bem-element(Overlay, wrapper, rightRight) } {
+  right: 0;
+}
+
+#{ bem-element(Overlay, wrapper, topTop) } {
+  top: 0
+}
+
+#{ bem-element(Overlay, wrapper, topMiddle) } {
+  top: calc(50%);
+}
+
+#{ bem-element(Overlay, wrapper, topBottom) } {
+  top: calc(100%);
+}
+
+#{ bem-element(Overlay, wrapper, bottomTop) } {
+  bottom: calc(100%);
+}
+
+#{ bem-element(Overlay, wrapper, bottomMiddle) } {
+  bottom: calc(50%);
+}
+
+#{ bem-element(Overlay, wrapper, bottomBottom) } {
+  bottom: 0;
+}
+
+
+#{ bem-element(Overlay, overlay) } {
+  pointer-events: all;
+}
+
+
+

@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "sourceMap": true,
+    "noImplicitAny": false,
+    "noImplicitReturns": true,
+    "module": "commonjs",
+    "target": "es5",
+    "moduleResolution": "node",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "jsx": "react",
+    "lib": ["es5", "es2015", "dom"],
+    "baseUrl": "./",
+    "paths": {
+      "components/*": ["./src/components/*"],
+      "utils/*": ["./src/utils/*"],
+      "modules/*": ["./src/modules/*"],
+      "types": ["./src/types"],
+      "types/*": ["./src/types/*"]
+    }
+  },
+  "include": ["./src/**/*", "./__tests__/**/*"],
+  "exclude": ["node_modules", "build", "webpack"]
+}

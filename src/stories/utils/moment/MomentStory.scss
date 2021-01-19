@@ -1,0 +1,22 @@
+@import "styles/bem.scss";
+@import "styles/mixins.scss";
+@import "styles/variables.scss";
+
+#{ bem-block(MomentStory) } {
+}
+
+#{ bem-element(MomentStory, title) } {
+
+}
+
+#{ bem-element(MomentStory, example) } {
+  @include flex(row, stretch, $flex-wrap: true);
+}
+
+#{ bem-element(MomentStory, exampleItem) } {
+  @include flex(column);
+  margin: 5px;
+  padding-left: 10px;
+  border-left: 1px solid $grey;
+  white-space: nowrap;
+}

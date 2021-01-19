@@ -1,0 +1,46 @@
+@import "styles/variables";
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin: 26px 0;
+}
+
+.headerTitle {
+  font-size: 22px;
+  font-weight: normal;
+  letter-spacing: 0.71px;
+  margin: 0;
+}
+
+.addLink {
+  outline: none;
+  text-decoration: none !important;
+}
+
+.addButton {
+  padding-left: 32px !important;
+  padding-right: 32px !important;
+}
+
+.deleteLink {
+  justify-content: center;
+  color: var(--color-grey-dark) !important;
+  text-decoration: none !important;
+}
+
+.deleteLink:hover {
+  color: var(--color-black) !important;
+}
+
+.defaultCell {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.setAsDefaultLink:hover {
+  color: var(--color-grey-darkest);
+}

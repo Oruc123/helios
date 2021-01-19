@@ -1,0 +1,20 @@
+@import "styles/bem.scss";
+@import "styles/variables.scss";
+@import "styles/mixins.scss";
+
+#{ bem-block(InputListElement) } {
+  @include transition(background-color, .1s, ease-in);
+  padding: 0 15px;
+  min-height: 38px;
+  font-size: 13px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 17px;
+  letter-spacing: 0.31px;
+  color: #000000;
+}
+
+#{ bem-element(InputListElement, icon) } {
+  margin-right: 8px;
+}

@@ -1,0 +1,19 @@
+@import "styles/bem.scss";
+@import "styles/mixins.scss";
+
+#{ bem-block(PropsStory) } {
+}
+
+#{ bem-block(Section) } {
+  border: 1px solid #ccc;
+  background: #fff;
+}
+
+#{ bem-element(Section, header) } {
+  border-bottom: 1px solid #ccc;
+  padding: 4px 10px;
+}
+
+#{ bem-element(Section, content) } {
+  padding: 10px;
+}

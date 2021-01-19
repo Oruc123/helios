@@ -1,0 +1,5 @@
+export const GET_TABLE_DATA = 'GET_TABLE_DATA';
+export const GET_TABLE_DATA_SUCCESS = 'GET_TABLE_DATA_SUCCESS';
+export const GET_TABLE_DATA_FAILURE = 'GET_TABLE_DATA_FAILURE';
+
+export const TABLES_STORE_ID = 'tables';

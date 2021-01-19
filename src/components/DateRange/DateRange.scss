@@ -1,0 +1,16 @@
+@import "styles/bem.scss";
+@import "styles/mixins.scss";
+@import "styles/variables.scss";
+
+#{ bem-block(DateRange) } {
+  @include flex(row, flex-start);
+}
+
+#{ bem-element(DateRange, startDate) } {
+  width: 161px;
+}
+
+#{ bem-element(DateRange, endDate) } {
+  margin-left: 20px;
+  width: 179px;
+}

@@ -1,0 +1,22 @@
+@import "styles/bem.scss";
+@import "styles/variables.scss";
+@import "styles/mixins.scss";
+
+#{ bem-block(CheckGroup) } {
+
+}
+
+#{ bem-element(CheckGroup, item, null, bem-block(CheckBox)) } {
+  @include transition(background-color, .1s, ease-in);
+  @include flex(row, center);
+  height: 32px;
+  padding: 0 7px;
+
+  &:hover {
+    background-color: rgba(200, 200, 200, .2);
+  }
+}
+
+#{ bem-element(CheckGroup, itemLabel) } {
+  flex: 1;
+}

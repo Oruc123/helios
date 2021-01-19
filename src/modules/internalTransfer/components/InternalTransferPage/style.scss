@@ -1,0 +1,15 @@
+@import "styles/bem.scss";
+@import "styles/variables.scss";
+@import "styles/mixins.scss";
+
+#{ bem-block(TransferPage) } {
+}
+
+#{ bem-element(TransferPage, column) } {
+  flex: 1;
+  margin-right: 30px;
+}
+
+#{ bem-element(TransferPage, detailsNotes) } {
+  width: 100%;
+}

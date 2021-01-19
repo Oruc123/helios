@@ -1,0 +1,12 @@
+@import "styles/bem.scss";
+@import "styles/mixins.scss";
+@import "styles/variables.scss";
+
+#{ bem-block(ForgotForm) } {
+}
+
+#{ bem-element(ForgotForm, buttons) } {
+  @include flex(row, center, $justify-content: space-between);
+  margin-top: 30px;
+}
+

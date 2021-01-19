@@ -1,0 +1,100 @@
+@import "styles/bem.scss";
+@import "styles/mixins.scss";
+@import "styles/variables.scss";
+
+#{ bem-block(MainBar) } {
+  @include flex(column, stretch);
+  @include transition(width, .2s, ease-in);
+  width: 224px;
+  height: 100vh;
+}
+
+#{ bem-block(MainBar, minimized) } {
+  width: 63px;
+}
+
+#{ bem-element(MainBar, header) } {
+  height: 56px;
+  @include flex(row, center);
+}
+
+
+#{ bem-element(MainBar, button) } {
+  flex: none;
+  margin: 0 24px 0 16px;
+}
+
+#{ bem-element(MainBar, logo) } {
+  @include transition(opacity, .05s, ease-in, .05s);
+  flex: 1;
+  overflow: hidden;
+  white-space: nowrap;
+  opacity: 1;
+}
+
+#{ bem-element(MainBar, logo, minimized) } {
+  opacity: 0;
+}
+
+#{ bem-element(MainBar, content) } {
+  margin-top: 41px;
+  overflow-x: hidden;
+  flex: 1;
+}
+
+#{ bem-element(MainBar, help) } {
+  @include transition(color background, .1s, ease-in);
+
+  background: transparent;
+  border-top: 1px solid #e2e2e2;
+  padding: 21px 20px;
+  font-size: 12px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.25px;
+  color: #868686;
+  overflow: hidden;
+
+  &:visited {
+    color: #7b7b7b;
+  }
+
+  &:hover, &:focus, &:visited:hover {
+    background: #e2e2e2;
+    color: #000;
+    cursor: pointer;
+
+    #{ bem-element(MainBar, helpIcon) } {
+      fill: #00c698;
+      color: #fff;
+    }
+
+    #{ bem-element(MainBar, helpArrow) } {
+      opacity: 1;
+    }
+  }
+
+  &:hover, &:focus {
+    text-decoration: none;
+  }
+}
+
+#{ bem-element(MainBar, helpIcon) } {
+  @include transition(fill color, .1s, ease-in);
+  fill: #bababa;
+  color: #7b7b7b;
+  margin-right: 8px;
+  flex: none;
+}
+
+#{ bem-element(MainBar, helpLabel) } {
+  @include transition(opacity, .05s, ease-in, .05s);
+  white-space: nowrap;
+  opacity: 1;
+}
+
+#{ bem-element(MainBar, helpLabel, minimized) } {
+  opacity: 0;
+}

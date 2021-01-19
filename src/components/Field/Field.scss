@@ -1,0 +1,64 @@
+@import "../../styles/bem";
+@import "../../styles/mixins";
+@import "../../styles/variables";
+
+$field-label-font-size: 12px;
+$field-label-font-weight: 600;
+$field-label-font-style: normal;
+$field-label-line-height: 15px;
+$field-label-color: #b8b8b8;
+$field-label-color-invalid: #fa5252;
+
+$field-message-font-size: 12px;
+$field-message-font-weight: normal;
+$field-message-font-style: normal;
+$field-message-line-height: 15px;
+$field-message-color: #b8b8b8;
+$field-message-color-invalid: #fa5252;
+
+#{ bem-block(Field) } {
+  position: relative;
+  padding-bottom: 22px;
+}
+
+#{ bem-block(Field, label) } {
+  padding-top: 22px;
+}
+
+#{ bem-element(Field, label) } {
+  @include position(absolute, 0, 0);
+  @include transition(color, .1s, ease-in);
+
+  font-size: $field-label-font-size;
+  font-weight: $field-label-font-weight;
+  font-style: $field-label-font-style;
+  font-stretch: normal;
+  line-height: $field-label-line-height;
+  letter-spacing: normal;
+  color: $field-label-color;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+#{ bem-element(Field, label, invalid) } {
+  color: $field-label-color-invalid;
+}
+
+#{ bem-element(Field, message) } {
+  @include position(absolute, $bottom: 8px);
+  @include transition(color, .1s, ease-in);
+
+  font-size: $field-message-font-size;
+  font-weight: $field-message-font-weight;
+  font-style: $field-message-font-style;
+  font-stretch: normal;
+  line-height: $field-message-line-height;
+  letter-spacing: normal;
+  color: $field-message-color;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+#{ bem-element(Field, message, invalid) } {
+  color: $field-message-color-invalid;
+}

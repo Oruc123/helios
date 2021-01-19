@@ -1,0 +1,15 @@
+@import "styles/bem.scss";
+@import "styles/mixins.scss";
+@import "styles/variables.scss";
+@import "components/Input/variables.scss";
+
+#{ bem-block(Search) } {
+}
+
+#{ bem-element(Search, wrapper) } {
+  width: 255px;
+}
+
+#{ bem-element(Search, wrapper, null, bem-block(InputLike, focused)) } {
+  border-color: $input-background-color;
+}

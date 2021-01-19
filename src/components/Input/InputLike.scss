@@ -1,0 +1,43 @@
+@import "styles/bem.scss";
+@import "styles/variables.scss";
+@import "styles/mixins.scss";
+@import "variables.scss";
+
+#{ bem-block(InputLike) } {
+  @include transition(background-color border-color opacity, .1s, ease-in);
+
+  // height: $input-height;
+  background-color: $input-background-color;
+  border: $input-border-width $input-border-style $input-border-color;
+  border-radius: $input-border-radius;
+  justify-content: stretch;
+}
+
+#{ bem-block(InputLike, invalid) } {
+  background-color: $input-background-color-invalid;
+  border-color: $input-border-color-invalid;
+}
+
+#{ bem-block(InputLike, (invalid, focused)) } {
+  background-color: $input-background-color-invalid-focused;
+  border-color: $input-border-color-invalid;
+}
+
+#{ bem-block(InputLike, focused) } {
+  background-color: $input-background-color-focused;
+  border-color: $input-border-color-focused;
+}
+
+#{ bem-block(InputLike, disabled) } {
+  cursor: not-allowed;
+  opacity: .6;
+}
+
+#{ bem-block(InputLike, rounded) } {
+  border-radius: $input-border-radius-rounded;
+}
+
+#{ bem-element(InputLike, icon) } {
+  @include transition(fill color, .1s, ease-in);
+  margin-left: $input-icon-margin-left;
+}

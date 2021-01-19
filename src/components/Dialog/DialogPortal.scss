@@ -1,0 +1,43 @@
+@import "styles/bem.scss";
+@import "styles/variables.scss";
+@import "styles/mixins.scss";
+
+#{ bem-block(DialogPortal) } {
+  @include position(absolute, 0, 0, 0, 0);
+  @include flex(row);
+  @include transition(background-color, .1s);
+
+  overflow: auto;
+  padding: 40px;
+  background-color: rgba(0, 0, 0, .4);
+}
+
+#{ bem-block(DialogPortal, hidden) } {
+  background-color: rgba(0, 0, 0, 0);
+  pointer-events: none;
+}
+
+#{ bem-element(DialogPortal, dialog) } {
+  @include transition(opacity transform, .2s);
+  margin: auto;
+}
+
+#{ bem-element(DialogPortal, dialogEnter) } {
+  opacity: 0;
+  transform: translate3d(0, -100px, 0);
+}
+
+#{ bem-element(DialogPortal, dialogEnterActive) } {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+#{ bem-element(DialogPortal, dialogExit) } {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+#{ bem-element(DialogPortal, dialogExitActive) } {
+  opacity: 0;
+  transform: translate3d(0, -100px, 0);
+}

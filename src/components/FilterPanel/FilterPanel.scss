@@ -1,0 +1,32 @@
+@import "styles/bem.scss";
+@import "styles/variables.scss";
+@import "styles/mixins.scss";
+
+#{ bem-block(FilterPanel) } {
+}
+
+#{ bem-element(FilterPanel, content, null, bem-element(Panel, content)) } {
+  padding: 20px 24px 11px 24px;
+}
+
+#{ bem-element(FilterPanel, clear) } {
+  @include transition(opacity, .1s, ease-in);
+  opacity: 1;
+}
+
+#{ bem-element(FilterPanel, clear, hidden) } {
+  opacity: 0;
+  pointer-events: none;
+}
+
+#{ bem-element(FilterPanel, clear, null, bem-block(Button, link, bem-block(Sized, medium))) } {
+  min-width: auto;
+  padding: 0;
+  height: auto;
+  font-size: 12px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.27px;
+}

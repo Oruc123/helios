@@ -1,0 +1,8 @@
+@import "styles/bem.scss";
+@import "styles/mixins.scss";
+@import "styles/variables.scss";
+
+#{ bem-element(UserListPage, action, add) } {
+  margin-left: 20px;
+  width: 112px;
+}

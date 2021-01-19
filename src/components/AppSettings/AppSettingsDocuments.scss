@@ -1,0 +1,69 @@
+@import "styles/bem.scss";
+@import "styles/variables.scss";
+@import "styles/mixins.scss";
+
+#{ bem-block(AppSettingsDocuments) } {
+}
+
+#{ bem-element(AppSettingsDocuments, content) } {
+  padding: 0 36px 18px 36px;
+}
+
+#{ bem-element(AppSettingsDocuments, section) } {
+  margin: 20px 0 10px 0;
+}
+
+#{ bem-element(AppSettingsDocuments, field, templates) } {
+  @include flex(row);
+}
+
+#{ bem-element(AppSettingsDocuments, link) } {
+  font-style: italic;
+  color: #000;
+  text-decoration: underline;
+
+  &:hover, &:active, &:visited, &:visited:hover, &:visited:active {
+    color: #000;
+    text-decoration: underline;
+  }
+}
+
+#{ bem-element(AppSettingsDocuments, link, bank) } {
+  margin-left: 40px;
+}
+
+#{ bem-element(AppSettingsDocuments, field, alerts) } {
+  @include flex(row, center);
+}
+
+#{ bem-element(AppSettingsDocuments, field, alert) } {
+  @include flex(row, center);
+}
+
+#{ bem-element(AppSettingsDocuments, inputWrapper, alert) } {
+  margin: 0 14px 0 6px;
+}
+
+#{ bem-element(AppSettingsDocuments, field, alert second) } {
+  margin-left: 40px;
+}
+
+#{ bem-element(AppSettingsDocuments, label, alert) } {
+  color: #7b7b7b;
+}
+
+#{ bem-element(AppSettingsDocuments, label, alert sup) } {
+  align-self: flex-start;
+}
+
+#{ bem-element(AppSettingsDocuments, section, amazon) } {
+  @include flex(row, flex-start);
+}
+
+#{ bem-element(AppSettingsDocuments, column, amazon) } {
+  width: 270px;
+}
+
+#{ bem-element(AppSettingsDocuments, column, amazon right) } {
+  margin-left: 70px;
+}

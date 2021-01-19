@@ -1,0 +1,41 @@
+@import "styles/variables";
+
+.section {
+    margin: 20px 0 10px 0;
+}
+
+.columns {
+    display: flex;
+}
+
+.left {
+    width: 340px;
+}
+
+.right {
+    floaT: left;
+}
+
+.amountInput {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80px;
+    color: var(--color-legend-title);
+}
+
+.statusSelect {
+    width: 161px;
+}
+
+.senderSelect {
+    width: 161px;
+}
+
+.notesInput {
+    height: 112px;
+}
+
+.notesField {
+    width: 610px;
+}

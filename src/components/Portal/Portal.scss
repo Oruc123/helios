@@ -1,0 +1,13 @@
+@import "styles/bem.scss";
+@import "styles/variables.scss";
+@import "styles/mixins.scss";
+
+#{ bem-block(Portal) } {
+  pointer-events: all;
+}
+
+#{ bem-element(Portal, root) } {
+  @include position(fixed, 0, 0, 0, 0);
+  pointer-events: none;
+  z-index: 1;
+}

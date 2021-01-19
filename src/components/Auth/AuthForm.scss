@@ -1,0 +1,54 @@
+@import "styles/bem.scss";
+@import "styles/mixins.scss";
+
+#{ bem-block(AuthForm) } {
+  position: relative;
+  width: 420px;
+  padding: 60px 53px 65px 53px;
+  border-radius: 0 70px 0 70px;
+  background-image: linear-gradient(to bottom, rgba(0, 198, 152, 0.8), #2fd1c0);
+  overflow: hidden;
+}
+
+#{ bem-block(AuthForm, message) } {
+  padding-top: 114px;
+}
+
+#{ bem-element(AuthForm, title) } {
+  font-size: 42px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1;
+  letter-spacing: 1px;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin: 0 0 38px 0;
+}
+
+#{ bem-element(AuthForm, message) } {
+  @include position(absolute, $left: 0, $top: 0, $right: 0);
+  @include flex(row, center);
+
+  opacity: 0.88;
+  background-color: #259078;
+  padding: 21px 95px 21px 53px;
+  font-size: 13px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.4;
+  letter-spacing: 0.2px;
+  color: #ffffff;
+}
+
+#{ bem-element(AuthForm, message, error) } {
+  background-color: #fa5252;
+}
+
+#{ bem-element(AuthForm, messageIcon) } {
+  min-width: 24px;
+  height: auto;
+  margin-right: 16px;
+  fill: #fff;
+}

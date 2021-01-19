@@ -1,0 +1,47 @@
+@import "styles/bem.scss";
+@import "styles/variables.scss";
+@import "styles/mixins.scss";
+
+$selection-item-background-color: rgba(200, 200, 200, .2);
+
+#{ bem-block(SelectableItem) } {
+  @include transition(opacity, .1s, ease-in);
+  position: relative;
+  cursor: pointer;
+
+  &:before, &:after {
+    @include transition(background-color, .1s, ease-in);
+    @include position(absolute, 0, 0, 0, 0);
+    content: "";
+    background-color: transparent;
+  }
+
+  &:after {
+    border: 1px dotted transparent;
+  }
+
+  &:hover:after {
+    background-color: rgba(200, 200, 200, .1);
+  }
+}
+
+#{ bem-block(SelectableItem, disabled) } {
+  opacity: .6;
+  cursor: not-allowed;
+
+  &:before, &:after {
+    content: none;
+  }
+}
+
+#{ bem-block(SelectableItem, selected) } {
+  &:before {
+    background-color: $selection-item-background-color;
+  }
+}
+
+#{ bem-block(SelectableItem, focused lead) } {
+  &:after {
+    border-color: #ccc;
+  }
+}

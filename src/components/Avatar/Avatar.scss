@@ -1,0 +1,30 @@
+@import 'styles/bem.scss';
+@import 'styles/mixins.scss';
+
+#{ bem-block(Avatar) } {
+  min-width: 31px;
+  height: 31px;
+  width: 31px;
+  line-height: 31px;
+  border-radius: 50%;
+  text-align: center;
+  overflow: hidden;
+  background: gray;
+  position: relative;
+  float: left;
+
+  &:after {
+    @include position(absolute, 0, 0, 0, 0);
+    content: '';
+    background: rgba(128, 128, 128, 0.11);
+  }
+}
+
+#{ bem-block(Avatar, image) } {
+  background: transparent;
+}
+
+#{ bem-element(Avatar, image) } {
+  @include position(absolute, 0, 0, $height: 100%);
+  background: #fff;
+}

@@ -1,0 +1,41 @@
+@import "styles/bem.scss";
+@import "styles/variables.scss";
+@import "styles/mixins.scss";
+@import "components/Input/variables.scss";
+@import "components/Button/Button.scss";
+
+#{ bem-block(AppSettingsGeneral) } {
+}
+
+#{ bem-element(AppSettingsGeneral, content) } {
+  padding: 1px 36px 18px 36px;
+}
+
+#{ bem-element(AppSettingsGeneral, section) } {
+  margin: 20px 0 10px 0;
+}
+
+#{ bem-element(AppSettingsGeneral, section, settings) } {
+  @include flex(row, flex-start);
+}
+
+#{ bem-element(AppSettingsGeneral, column) } {
+  width: 270px;
+}
+
+#{ bem-element(AppSettingsGeneral, column, right) } {
+  margin-left: 70px;
+}
+
+
+#{ bem-element(AppSettingsGeneral, field, email) } {
+  width: 270px;
+}
+
+#{ bem-element(AppSettingsGeneral, field, flex) } {
+  @include flex(row);
+}
+
+#{ bem-element(AppSettingsGeneral, inputWrapper, flex) } {
+  margin-right: 15px;
+}

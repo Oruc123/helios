@@ -1,0 +1,13 @@
+@import "styles/bem.scss";
+
+#{ bem-block(App) } {
+  height: 100%;
+}
+
+#{ bem-element(App, page) } {
+  height: 100%;
+}
+
+#{ bem-element(App, spinner, null, bem-block(Spinner, centered)) } {
+  position: fixed;
+}

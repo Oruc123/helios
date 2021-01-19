@@ -1,0 +1,28 @@
+@import "styles/bem.scss";
+@import "styles/variables.scss";
+@import "styles/mixins.scss";
+
+#{ bem-block(AppSettingsMetrc) } {
+}
+
+#{ bem-element(AppSettingsMetrc, content) } {
+  padding: 20px 36px 18px 36px;
+}
+
+#{ bem-element(AppSettingsMetrc, field, domain) } {
+  width: 270px;
+}
+
+#{ bem-element(AppSettingsMetrc, actions) } {
+  @include transition(opacity, .1s, ease-in);
+  @include flex(row);
+  opacity: 1;
+}
+
+#{ bem-element(AppSettingsMetrc, actions, hidden) } {
+  opacity: 0;
+}
+
+#{ bem-element(AppSettingsMetrc, action, save) } {
+  margin-left: 10px;
+}

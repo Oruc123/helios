@@ -1,0 +1,12 @@
+{
+  "version": "[VERSION]",
+  "environment": "[ENVIRONMENT]",
+  "apiBaseURL": "[API_BASE_URL]",
+  "plaidPublicKey": "[PLAID_PUBLIC_KEY]",
+  "plaidEnvironment": "[PLAID_ENVIRONMENT]",
+  "auth0Domain": "[AUTH0_DOMAIN]",
+  "auth0ClientID": "[AUTH0_CLIENT_ID]",
+  "auth0Audience": "[AUTH0_AUDIENCE]",
+  "auth0Connection": "[AUTH0_CONNECTION]",
+  "zendeskWebWidgetKey": "[ZENDESK_WEB_WIDGET_KEY]"
+}

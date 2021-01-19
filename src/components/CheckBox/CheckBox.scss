@@ -1,0 +1,28 @@
+@import "styles/bem.scss";
+@import "styles/variables.scss";
+@import "styles/mixins.scss";
+
+#{ bem-block(CheckBox) } {
+  @include transition(opacity, .1s, ease-in);
+  display: inline-block;
+}
+
+#{ bem-element(CheckBox, label) } {
+  @include flex(row, center);
+  cursor: pointer;
+}
+
+#{ bem-element(CheckBox, label, disabled) } {
+  cursor: not-allowed;
+  opacity: .6;
+}
+
+#{ bem-element(CheckBox, input) } {
+  @include position(absolute, 0, 0, $width: 0, $height: 0);
+  outline: 0;
+  opacity: 0;
+}
+
+#{ bem-element(CheckBox, mark, label) } {
+  margin-right: 8px;
+}

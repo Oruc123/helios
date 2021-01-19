@@ -1,0 +1,5 @@
+@import "styles/variables";
+
+.deviceName {
+  white-space: nowrap;
+}

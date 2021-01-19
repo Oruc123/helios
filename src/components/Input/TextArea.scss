@@ -1,0 +1,55 @@
+@import "styles/bem.scss";
+@import "styles/variables.scss";
+@import "styles/mixins.scss";
+@import "variables.scss";
+
+@-webkit-keyframes -text-input-text-keyframes-autofill {
+  to {
+    background-color: transparent;
+    color: var(--input-autocomplete-color);
+    font-size: $input-font-size;
+  }
+}
+
+@mixin -text-input-text-autofill() {
+  // @magic This fixes some problems with autocompletes on webkit
+  &:-webkit-autofill, &:-webkit-autofill:focus, &:-webkit-autofill:hover {
+    -webkit-animation-name: -text-input-text-keyframes-autofill;
+    -webkit-animation-fill-mode: both;
+  }
+}
+
+#{ bem-block(TextArea) } {
+  @include transition(color, .1s, ease-in);
+  --input-autocomplete-color: $input-color;
+
+  min-width: 0;
+  padding: $input-padding-top $input-padding-right $input-padding-bottom $input-padding-left;
+  border: none;
+  background: transparent;
+  font-size: $input-font-size;
+  line-height: 18px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  letter-spacing: normal;
+  color: $input-color;
+  outline: 0;
+  resize: none;
+
+  &::placeholder {
+    font-size: $input-font-size;
+    color: #bababa;
+  }
+
+  &:invalid {
+    box-shadow: none;
+  }
+
+  // @magic This fixes some problems with autocompletes on webkit
+  @include -text-input-text-autofill;
+}
+
+#{ bem-block(TextArea, disabled) } {
+  cursor: not-allowed;
+}

@@ -1,0 +1,11 @@
+@import "styles/bem.scss";
+@import "styles/variables.scss";
+@import "styles/mixins.scss";
+
+#{ bem-block(InputArrow) } {
+  @include transition(transform, .3s, ease);
+}
+
+#{ bem-block(InputArrow, rotate) } {
+  transform: rotate(180deg);
+}

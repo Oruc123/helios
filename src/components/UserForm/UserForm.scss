@@ -1,0 +1,22 @@
+@import "styles/bem.scss";
+@import "styles/variables.scss";
+@import "styles/mixins.scss";
+
+#{ bem-block(UserForm) } {
+}
+
+#{ bem-element(UserForm, columns) } {
+  @include flex(row, flex-start);
+}
+
+#{ bem-element(UserForm, column) } {
+  width: 242px;
+}
+
+#{ bem-element(UserForm, column, right) } {
+  margin-left: 28px;
+}
+
+#{ bem-element(UserForm, footer) } {
+  width: 100%;
+}

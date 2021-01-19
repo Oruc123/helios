@@ -1,0 +1,30 @@
+@import "styles/bem.scss";
+@import "styles/variables.scss";
+@import "styles/mixins.scss";
+
+#{ bem-block(CompanyForm) } {
+}
+
+#{ bem-element(CompanyForm, columns) } {
+  @include flex(row, flex-start);
+}
+
+#{ bem-element(CompanyForm, column) } {
+  width: 242px;
+}
+
+#{ bem-element(CompanyForm, column, right) } {
+  margin-left: 28px;
+}
+
+#{ bem-element(CompanyForm, footer) } {
+  width: 100%;
+}
+
+#{ bem-element(CompanyForm, submit) } {
+  width: 140px;
+}
+
+#{ bem-element(CompanyForm, continue) } {
+  width: 140px;
+}

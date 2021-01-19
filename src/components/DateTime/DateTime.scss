@@ -1,0 +1,9 @@
+@import 'styles/bem.scss';
+
+#{ bem-block(DateTime) } {
+}
+
+#{bem-element(DateTime, part)} {
+  white-space: nowrap;
+  padding: 0 4px;
+}

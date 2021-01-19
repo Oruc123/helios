@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang='en'>
+<head>
+  <meta charset='utf-8'>
+  <meta name='viewport' content='width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no'>
+
+  <title>Bank Portal</title>
+  <style>
+    .root-loader {
+      position: absolute;
+      width: 64px;
+      height: 64px;
+      left: 50%;
+      top: 50%;
+      margin-left: -32px;
+      margin-top: -32px;
+      box-sizing: border-box;
+      border-radius: 50%;
+      border-width: 8px;
+      border-style: solid;
+      border-color: #00c698 transparent #00c698 transparent;
+
+      -webkit-animation: root-loader-keyframes 2s infinite linear;
+      animation: root-loader-keyframes 2s infinite linear;
+    }
+
+    @-webkit-keyframes root-loader-keyframes {
+      0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+      }
+      100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes root-loader-keyframes {
+      0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+      }
+      100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+</head>
+<body>
+<div id='root'>
+  <div class='root-loader'></div>
+</div>
+</body>
+</html>

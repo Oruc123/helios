@@ -1,0 +1,42 @@
+@import "styles/bem.scss";
+@import "styles/variables.scss";
+@import "styles/mixins.scss";
+
+#{ bem-block(TransfersFilter) } {
+  @include flex(row, flex-start);
+}
+
+#{ bem-element(TransfersFilter, rightColumn) } {
+  flex: 1;
+  margin-left: 63px;
+}
+
+#{ bem-element(TransfersFilter, status, null, bem-block(Field)) } {
+  width: 161px;
+}
+
+#{ bem-element(TransfersFilter, recipient, null, bem-block(Field)) } {
+  padding-bottom: 0;
+}
+
+#{ bem-element(TransfersFilter, sender, null, bem-block(Field)) } {
+  padding-bottom: 0;
+}
+
+#{ bem-element(TransfersFilter, period, null, bem-block(Field)) } {
+  width: 161px;
+  padding-bottom: 0;
+}
+
+#{ bem-element(TransfersFilter, fieldSet) } {
+  @include flex(row);
+}
+
+#{ bem-element(TransfersFilter, name) } {
+  width: 161px;
+}
+
+#{ bem-element(TransfersFilter, license) } {
+  width: 161px;
+  margin-left: 20px;
+}

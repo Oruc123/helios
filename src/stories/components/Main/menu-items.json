@@ -1,0 +1,44 @@
+[
+  {
+    "to": "/relationships",
+    "exact": true,
+    "children": "Relationships",
+    "icon-type": "group"
+  },
+  {
+    "to": "/alerts",
+    "exact": true,
+    "children": "Alerts",
+    "icon-type": "bell"
+  },
+  {
+    "to": "/documents-due",
+    "exact": true,
+    "children": "Documents Due",
+    "icon-type": "clock"
+  },
+  {
+    "to": "/internal-transfers",
+    "exact": true,
+    "children": "Internal Transfers",
+    "icon-type": "exchange"
+  },
+  {
+    "to": "/internal-transfers/export",
+    "exact": true,
+    "children": "Internal Transfers Export",
+    "icon-type": "export"
+  },
+  {
+    "to": "/users",
+    "exact": true,
+    "children": "Users",
+    "icon-type": "users"
+  },
+  {
+    "to": "/app-settings",
+    "exact": true,
+    "children": "App Settings",
+    "icon-type": "settings"
+  }
+]

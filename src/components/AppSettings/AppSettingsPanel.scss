@@ -1,0 +1,20 @@
+@import "styles/bem.scss";
+@import "styles/variables.scss";
+@import "styles/mixins.scss";
+
+#{ bem-block(AppSettingsPanel) } {
+}
+
+#{ bem-element(AppSettingsPanel, actions) } {
+  @include transition(opacity, .1s, ease-in);
+  @include flex(row);
+  opacity: 1;
+}
+
+#{ bem-element(AppSettingsPanel, actions, hidden) } {
+  opacity: 0;
+}
+
+#{ bem-element(AppSettingsPanel, action, save) } {
+  margin-left: 10px;
+}

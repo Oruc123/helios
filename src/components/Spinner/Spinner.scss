@@ -1,0 +1,88 @@
+@import "styles/bem.scss";
+
+$spinner-animation-duration: 2s;
+
+$spinner-sizes: (
+  small: 32px,
+  medium: 64px,
+  large: 128px
+);
+
+$spinner-border-widths: (
+  small: 4px,
+  medium: 8px,
+  large: 14px
+);
+
+$spinner-color-primary: #00c698;
+$spinner-color-secondary: rgba(255, 255, 255, 0.2);
+
+@mixin helios-spinner($size: medium) {
+  @if ($size != small and $size!= large) {
+    $size: medium;
+  }
+
+  $size-px: map-get($spinner-sizes, $size);
+  $border-width-px: map-get($spinner-border-widths, $size);
+
+  width: $size-px;
+  height: $size-px;
+  border-width: $border-width-px;
+  border-radius: 50%;
+}
+
+@mixin helios-spinner-offset($size: medium) {
+  @if ($size != small and $size!= large) {
+    $size: medium;
+  }
+
+  $shift-px: -#{ map-get($spinner-sizes, $size) / 2 };
+  margin-left: $shift-px;
+  margin-top: $shift-px;
+}
+
+@keyframes helios-spinner-keyframes {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+#{ bem-block(Spinner) } {
+  position: relative;
+  border-style: solid;
+  border-color: $spinner-color-primary $spinner-color-secondary $spinner-color-primary $spinner-color-secondary;
+  animation: helios-spinner-keyframes $spinner-animation-duration infinite linear;
+}
+
+#{ bem-block(Spinner, null, bem-block(Sized, small)) } {
+  @include helios-spinner(small);
+}
+
+#{ bem-block(Spinner, null, bem-block(Sized, medium)) } {
+  @include helios-spinner(medium);
+}
+
+#{ bem-block(Spinner, null, bem-block(Sized, large)) } {
+  @include helios-spinner(large);
+}
+
+#{ bem-block(Spinner, centered) } {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+
+#{ bem-block(Spinner, centered, bem-block(Sized, small)) } {
+  @include helios-spinner-offset(small);
+}
+
+#{ bem-block(Spinner, centered, bem-block(Sized, medium)) } {
+  @include helios-spinner-offset(medium);
+}
+
+#{ bem-block(Spinner, centered, bem-block(Sized, large)) } {
+  @include helios-spinner-offset(large);
+}

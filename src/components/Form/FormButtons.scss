@@ -1,0 +1,17 @@
+@import "components/Spinner/Spinner.scss";
+@import "styles/bem.scss";
+@import "styles/mixins.scss";
+@import "styles/variables.scss";
+
+#{ bem-block(FormButtons) } {
+  @include flex(row, center, $justify-content: flex-start);
+}
+
+#{ bem-element(FormButtons, button) } {
+  width: 96px;
+  margin-right: 10px;
+}
+
+#{ bem-element(FormButtons, spinner) } {
+  animation: helios-spinner-keyframes $spinner-animation-duration infinite linear;
+}

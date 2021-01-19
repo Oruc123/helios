@@ -1,0 +1,41 @@
+@import 'styles/bem.scss';
+@import 'styles/mixins.scss';
+@import 'styles/variables.scss';
+
+#{ bem-block(Header) } {
+  @include flex(row, center, $justify-content: space-between);
+  padding-left: 70px;
+  padding-right: 70px;
+  min-height: 94px;
+  background: $cyan;
+  margin-bottom: 30px;
+}
+
+#{ bem-element(Header, wrapper) } {
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+#{ bem-element(Header, label) } {
+  font-size: 18px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#{ bem-element(Header, name) } {
+  font-size: 24px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 0.76px;
+  color: #ffffff;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

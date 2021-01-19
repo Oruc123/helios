@@ -1,0 +1,8 @@
+@import "styles/bem.scss";
+@import "styles/mixins.scss";
+@import "styles/variables.scss";
+
+#{ bem-block(MainHeader) } {
+  @include flex(row, center, $justify-content: flex-end);
+  padding-right: 56px;
+}

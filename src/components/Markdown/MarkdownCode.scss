@@ -1,0 +1,5 @@
+@import "styles/bem.scss";
+
+#{ bem-block(MarkdownCode) } {
+  padding: 1em;
+}

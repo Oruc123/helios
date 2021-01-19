@@ -1,0 +1,12 @@
+@import "styles/bem.scss";
+@import "styles/mixins.scss";
+@import "styles/variables.scss";
+
+#{ bem-block(DocumentsDueFilter) } {
+  @include flex(row, center);
+}
+
+#{ bem-element(DocumentsDueFilter, field) } {
+  width: 161px;
+  margin-right: 20px;
+}

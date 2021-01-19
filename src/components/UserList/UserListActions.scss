@@ -1,0 +1,15 @@
+@import "styles/bem.scss";
+@import "styles/mixins.scss";
+@import "styles/variables.scss";
+
+#{ bem-block(UserListActions) } {
+  @include flex(row, center, $justify-content: space-around);
+}
+
+#{ bem-element(UserListActions, rowAction) } {
+  text-transform: uppercase;
+}
+
+#{ bem-element(UserListActions, rowAction, delete) } {
+  margin-left: 25px;
+}

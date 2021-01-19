@@ -1,0 +1,20 @@
+@import 'styles/bem.scss';
+@import 'styles/variables.scss';
+@import 'styles/mixins.scss';
+@import 'variables.scss';
+
+#{ bem-block(InputText) } {
+  flex: 1;
+  align-self: stretch;
+}
+
+#{ bem-element(InputText, clear, null, bem-block(InputClear), bem-block(Icon)) } {
+  margin-right: 14px;
+  cursor: pointer;
+}
+#{ bem-element(InputText,error-message) } {
+  color: #fa5252;
+  font-size: 14px;
+  border-left: none !important;
+  margin: 5px 0;
+}

@@ -1,0 +1,94 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "extends": [
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier/@typescript-eslint",
+    "airbnb",
+    "prettier",
+    "prettier/babel",
+    "prettier/react"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "impliedStrict": true,
+      "jsx": true,
+      "modules": true,
+      "experimentalObjectRestSpread": true
+    }
+  },
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": true,
+    "jest": true
+  },
+  "globals": {
+    "window": true,
+    "__BASE_URL__": true,
+    "expect": true
+  },
+  "plugins": [
+    "babel",
+    "prettier",
+    "react"
+  ],
+  "settings": {
+    "react":  {
+      "version":  "detect"
+    },
+    "import/resolver": {
+      "webpack": {
+        "config": "./webpack/webpack.config.lint.js"
+      }
+    }
+  },
+  "rules": {
+    "arrow-body-style": [1, "as-needed"],
+    "comma-dangle": [2, "never"],
+    "linebreak-style": [0],
+    "max-len": ["error", 120, 4],
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
+    "react/forbid-prop-types": [0],
+    "no-shadow": 0,
+    "no-bitwise": 0,
+    "object-curly-newline": 0,
+    "prefer-destructuring": 0,
+    "react/display-name": 0,
+    "react/button-has-type": 0,
+    "react/sort-comp": [1, {
+      "order": [
+        "type-annotations",
+        "static-methods",
+        "lifecycle",
+        "everything-else",
+        "render"
+      ]
+    }],
+    "react/jsx-indent": [1, 2],
+    "react/jsx-indent-props": [1, 2],
+    "import/prefer-default-export": 0,
+    "import/no-cycle": 0,
+    "@typescript-eslint/explicit-function-return-type": 0,
+    "@typescript-eslint/no-var-requires": 0,
+    "@typescript-eslint/camelcase": 0,
+    "@typescript-eslint/no-explicit-any": {
+      "fixToUnknown": true,
+      "ignoreRestArgs": true
+    },
+    "no-empty-function": "off",
+    "@typescript-eslint/no-empty-function": "off"
+  },
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx"],
+      "rules": {
+        "@typescript-eslint/explicit-function-return-type": ["warning"],
+        "@typescript-eslint/no-var-requires": 1,
+        "comma-dangle": [2, "always-multiline"]
+      }
+    }
+  ]
+}

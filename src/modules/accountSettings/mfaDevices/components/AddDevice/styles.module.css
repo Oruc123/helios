@@ -1,0 +1,47 @@
+@import "styles/variables";
+
+.sentHeader {
+  display: block;
+  font-size: 18px;
+  font-weight: normal;
+  margin: 10px 0 21px 0;
+}
+
+.qr {
+  display: block;
+  margin: 1rem auto 2rem auto;
+}
+
+.retryBox {
+  margin-bottom: 1rem;
+}
+
+.retryBox * {
+  color: var(--color-grey-dark) !important;
+}
+
+.form {
+  width: 450px;
+}
+
+.deviceType {
+  width: 170px;
+}
+
+.nameInput, .codeInput {
+  width: 250px;
+}
+
+.challengeBox {
+  margin: 0;
+  padding: 0;
+  height: 0;
+  opacity: 0;
+  transition: all .5s ease-in-out;
+}
+
+.shownChallengeBox {
+  opacity: 1;
+  height: auto;
+  transition: all .5s ease-in-out;
+}

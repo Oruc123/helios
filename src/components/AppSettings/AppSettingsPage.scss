@@ -1,0 +1,10 @@
+@import "styles/bem.scss";
+@import "styles/mixins.scss";
+@import "styles/variables.scss";
+
+#{ bem-block(AppSettingsPage) } {
+}
+
+#{ bem-element(AppSettingsPage, section) } {
+  width: 161px;
+}

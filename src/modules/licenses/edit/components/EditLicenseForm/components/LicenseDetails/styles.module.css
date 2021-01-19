@@ -1,0 +1,34 @@
+@import "styles/variables";
+
+.section {
+    margin: 20px 0 10px 0;
+}
+
+.columns {
+    display: flex;
+  margin-bottom: 29px;
+}
+
+.left {
+    width: 486px;
+}
+
+.right {
+    floaT: left;
+}
+
+.internalTransfersInput {
+  height: 82px;
+}
+
+.nameInput, .licenseNumberInput, .bankAccountInput, .phoneInput {
+  width: 386px;
+}
+
+.customerInput, .accountOpeningDateInput, .issueDateInput .licenseTypeInput, .licenseSubTypeInput, .posTypeInput {
+  width: 230px;
+}
+
+.accountOpeningDateInput > span, .issueDateInput > span {
+  width: 100%
+}

@@ -1,0 +1,23 @@
+@import "styles/bem.scss";
+@import "styles/mixins.scss";
+
+#{ bem-block(FormStory) } {
+}
+
+#{ bem-block(LoginForm) } {
+  width: 480px;
+  margin: 0 auto;
+  padding: 40px 60px 40px 50px;
+  background: #fff;
+  border: 1px solid #efefef;
+  border-radius: 4px;
+}
+
+
+#{ bem-element(LoginForm, buttons) } {
+  @include flex($justify-content: flex-start);
+  margin-top: 30px;
+}
+
+#{ bem-element(LoginForm, submit) } {
+}

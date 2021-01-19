@@ -1,0 +1,11 @@
+@import "styles/variables";
+
+.buttons{
+    margin-top: 31px;
+}
+
+.hint {
+    color: var(--color-white);
+    margin-bottom: 4px;
+    display: block;
+}

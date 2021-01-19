@@ -1,0 +1,15 @@
+@import "styles/bem.scss";
+@import "styles/variables.scss";
+@import "styles/mixins.scss";
+
+#{ bem-block(CompanySelector) } {
+  @include flex(row, flex-start);
+}
+
+#{ bem-element(CompanySelector, field) } {
+  width: 270px;
+}
+
+#{ bem-element(CompanySelector, field, values) } {
+  margin-left: 70px;
+}

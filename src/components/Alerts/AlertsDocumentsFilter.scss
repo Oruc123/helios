@@ -1,0 +1,12 @@
+@import "styles/bem.scss";
+@import "styles/mixins.scss";
+@import "styles/variables.scss";
+
+
+#{ bem-block(AlertsDocumentsFilter) } {
+
+}
+
+#{ bem-element(AlertsDocumentsFilter, field) } {
+  width: 161px;
+}

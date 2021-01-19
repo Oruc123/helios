@@ -1,0 +1,33 @@
+@import "styles/bem.scss";
+@import "styles/variables.scss";
+@import "styles/mixins.scss";
+
+#{ bem-block(CompanyInvite) } {
+}
+
+#{ bem-element(CompanyInvite, columns) } {
+  @include flex(row, flex-start);
+}
+
+#{ bem-element(CompanyInvite, column) } {
+  width: 242px;
+}
+
+#{ bem-element(CompanyInvite, column, right) } {
+  margin-left: 28px;
+}
+
+#{ bem-element(CompanyInvite, footer) } {
+  width: 100%;
+}
+
+#{ bem-element(CompanyInvite, message) } {
+  color: #fa5252;
+  font-size: 13px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.4;
+  letter-spacing: 0.2px;
+  padding-bottom: 15px;
+}

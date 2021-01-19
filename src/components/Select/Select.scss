@@ -1,0 +1,15 @@
+@import "styles/bem.scss";
+@import "styles/variables.scss";
+
+#{ bem-block(Select) } {
+
+}
+
+#{ bem-element(Select, label) } {
+  font-size: 13px;
+  color: $grey;
+}
+
+#{ bem-element(Select, select) } {
+  min-width: 150px;
+}

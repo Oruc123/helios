@@ -1,0 +1,7 @@
+@import "~sass-true/sass/true";
+
+@include describe('sass') {
+  @include it('sass tests is working') {
+    @include assert-equal(true, true);
+  }
+}

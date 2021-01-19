@@ -1,0 +1,21 @@
+@import "styles/variables";
+
+.timeoutLink {
+  cursor: pointer;
+  display: block;
+  color: var(--color-white) !important;
+  font-weight: 400;
+}
+
+.timeoutLink:hover {
+  text-decoration: underline;
+}
+
+.timeoutLink b {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.disabled {
+  cursor: text;
+}

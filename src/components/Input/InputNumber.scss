@@ -1,0 +1,12 @@
+@import "styles/bem.scss";
+@import "styles/variables.scss";
+@import "styles/mixins.scss";
+@import "variables.scss";
+
+#{ bem-block(InputNumber) } {
+  text-align: center;
+}
+
+#{ bem-element(InputNumber, wrapper, null, bem-element(InputText, wrapper)) } {
+  width: 62px;
+}

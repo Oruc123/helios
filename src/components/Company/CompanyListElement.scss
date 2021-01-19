@@ -1,0 +1,30 @@
+@import "styles/bem.scss";
+@import "styles/variables.scss";
+@import "styles/mixins.scss";
+
+#{ bem-block(CompanyListElement) } {
+  font-size: 13px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 17px;
+  letter-spacing: normal;
+  color: #000000;
+  min-height: 32px;
+  padding: 0 10px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgba(200, 200, 200, .2);
+  }
+}
+
+#{ bem-element(CompanyListElement, label) } {
+  margin-left: 8px;
+}
+
+#{ bem-element(CompanyListElement, icon) } {
+  fill: #bababa;
+  width: 14px;
+  height: 14px;
+}

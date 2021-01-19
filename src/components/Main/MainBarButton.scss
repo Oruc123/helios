@@ -1,0 +1,23 @@
+@import "styles/bem.scss";
+@import "styles/mixins.scss";
+@import "styles/variables.scss";
+
+#{ bem-block(MainBarButton, null, bem-block(Button, link)) } {
+  #{ bem-element(Button, icon) } {
+    margin: 0;
+    fill: #181818;
+  }
+
+  &:active, &:hover, &:focus {
+    #{ bem-element(Button, icon) } {
+      fill: #181818;
+    }
+  }
+}
+
+#{ bem-block(MainBarButton, null, bem-block(Button, link), bem-block(Sized, medium)) } {
+  min-width: 30px;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+}

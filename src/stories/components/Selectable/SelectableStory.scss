@@ -1,0 +1,19 @@
+@import "styles/bem.scss";
+@import "styles/variables.scss";
+@import "styles/mixins.scss";
+
+#{ bem-block(SelectableStory) } {
+
+}
+
+#{ bem-element(SelectableStory, selectable) } {
+  display: inline-block;
+  width: 300px;
+  max-height: 200px;
+  border: 1px solid #ccc;
+  overflow: auto;
+}
+
+#{ bem-element(SelectableStory, item) } {
+  padding: 5px 10px;
+}

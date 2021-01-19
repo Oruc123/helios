@@ -1,0 +1,21 @@
+@import "styles/bem.scss";
+@import "styles/mixins.scss";
+@import "styles/variables.scss";
+@import "components/Spinner/Spinner.scss";
+
+#{ bem-block(AuthSubmitButton, isPending) } {
+  pointer-events: none;
+}
+
+#{ bem-element(AuthSubmitButton, icon, spinner, bem-block(Icon)) } {
+  width: 24px;
+  height: 24px;
+  margin-left: 30px;
+  animation: helios-spinner-keyframes $spinner-animation-duration infinite linear;
+}
+
+#{ bem-element(AuthSubmitButton, icon, arrow, bem-block(Icon)) } {
+  width: 30px;
+  margin-left: 24px;
+  height: auto;
+}

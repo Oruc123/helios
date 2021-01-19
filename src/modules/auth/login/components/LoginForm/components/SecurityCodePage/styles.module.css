@@ -1,0 +1,48 @@
+@import "styles/variables";
+
+.submit {
+  overflow: hidden;
+}
+
+.hint {
+  color: var(--color-white);
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  margin-right: 55px;
+  font-size: 14px;
+  line-height: 1.35;
+}
+
+.additionalHint {
+  color: var(--color-white);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 0;
+  margin-bottom: 0;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.qr {
+  margin: 1rem auto 0 auto;
+  text-align: center;
+}
+
+.qr canvas {
+  border-radius: 8px;
+}
+
+.resetLink {
+  display: block;
+  color: var(--color-white) !important;
+  font-weight: 400;
+  font-size: 12px;
+}
+
+.codeInput {
+  font-size: 16px !important;
+}

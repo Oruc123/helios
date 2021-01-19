@@ -1,0 +1,18 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: bank-portal-front-${GIT_BRANCH}
+  namespace: ${KUBERNETES_NAMESPACE}
+  labels:
+    k8s-app: bank-portal-front
+    git-branch: ${GIT_BRANCH}
+spec:
+  rules:
+  - host: ${INGRESS_HOST}
+    http:
+      paths:
+      - backend:
+          serviceName: bank-portal-front-${GIT_BRANCH}
+          servicePort: http
+        path: /
+---

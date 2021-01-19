@@ -1,0 +1,12 @@
+@import "styles/bem.scss";
+@import "styles/mixins.scss";
+@import "styles/variables.scss";
+
+#{ bem-block(AlertsReviewsFilter) } {
+  @include flex(row, center);
+}
+
+#{ bem-element(AlertsReviewsFilter, field) } {
+  width: 161px;
+  margin-right: 20px;
+}

@@ -1,0 +1,15 @@
+@import "styles/bem.scss";
+
+#root {
+  min-height: 100%;
+}
+
+body.sb-show-main {
+  background-color: transparent;
+}
+
+#{ bem-block(StoryLayout) } {
+  padding: 18px;
+  min-height: 100vh;
+  font-family: "Source Sans Pro", sans-serif;
+}

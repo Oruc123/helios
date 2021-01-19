@@ -1,0 +1,11 @@
+.columns {
+  display: flex;
+}
+
+.column {
+  margin-right: 30px;
+}
+
+.field {
+  width: 230px !important;
+}

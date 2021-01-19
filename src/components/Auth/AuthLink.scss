@@ -1,0 +1,23 @@
+@import "styles/bem.scss";
+@import "styles/mixins.scss";
+@import "styles/variables.scss";
+
+#{ bem-block(AuthLink) }, #{ bem-block(AuthLink) }:visited {
+  font-size: 12px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 15px;
+  letter-spacing: normal;
+  text-decoration: none;
+  color: #fff;
+
+  &:hover, &:focus {
+    color: #fff;
+  }
+
+  &:hover, &:focus {
+    text-decoration: underline;
+  }
+}
+

@@ -1,0 +1,32 @@
+@import "styles/variables";
+
+.section {
+    margin: 20px 0 10px 0;
+}
+
+.columns {
+    display: flex;
+  margin-bottom: 29px;
+}
+
+.left {
+    width: 486px;
+}
+
+.right {
+    floaT: left;
+}
+
+.input {
+  width: 88px;
+}
+
+.perCentInput {
+  display: flex;
+  align-items: center;
+}
+
+.perCentInput > span {
+  display: block;
+  margin-left: 21px;
+}

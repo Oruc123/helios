@@ -1,0 +1,22 @@
+@import "../../styles/bem";
+@import "../../styles/mixins";
+@import "../../styles/variables";
+
+#{ bem-block(FieldSet) } {
+  position: relative;
+  margin: 0;
+  padding: 30px 0 0 0;
+  min-width: 0;
+  border: 0;
+}
+
+#{ bem-element(FieldSet, legend) } {
+  @include position(absolute, 0, 0);
+  font-size: 13px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.29px;
+  color: #7b7b7b;
+}

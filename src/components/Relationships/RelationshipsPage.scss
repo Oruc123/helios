@@ -1,0 +1,35 @@
+@import "styles/bem.scss";
+@import "styles/mixins.scss";
+@import "styles/variables.scss";
+
+
+#{ bem-block(RelationshipsPage) } {}
+
+#{ bem-element(RelationshipsPage, row) } {
+  @include flex(row, center, $justify-content: center);
+}
+
+#{ bem-element(RelationshipsPage, rowLink) } {
+  text-transform: uppercase;
+}
+
+#{ bem-element(RelationshipsPage, rowLink, edit) } {
+  margin-right: 25px;
+}
+
+#{ bem-element(RelationshipsPage, icon) } {
+  width: 14px;
+  height: 14px;
+}
+
+#{ bem-element(RelationshipsPage, actions) } {
+  @include flex(row, center, $justify-content: space-between);
+}
+
+#{ bem-element(RelationshipsPage, search) } {
+  margin-left: 20px;
+}
+
+#{ bem-element(RelationshipsPage, add) } {
+  margin-left: 20px;
+}

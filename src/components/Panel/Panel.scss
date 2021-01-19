@@ -1,0 +1,105 @@
+@import "components/Icon/Icon-mixins.scss";
+@import "styles/bem.scss";
+@import "styles/variables.scss";
+@import "styles/mixins.scss";
+
+#{ bem-block(Panel) } {
+  overflow: hidden;
+}
+
+#{ bem-element(Panel, header) } {
+  @include flex(row, center);
+}
+
+#{ bem-element(Panel, header, primary) } {
+  height: 70px;
+  background-color: #e2e2e2;
+  padding: 0 22px 0 35px;
+}
+
+#{ bem-element(Panel, header, secondary) } {
+  height: 46px;
+  border-bottom: 1px solid transparent;
+  padding: 0 24px;
+}
+
+#{ bem-element(Panel, header, secondary expanded) } {
+  border-bottom-color: #eee;
+}
+
+#{ bem-element(Panel, toggle) } {
+  cursor: pointer;
+}
+
+#{ bem-element(Panel, toggle, null, bem-block(Icon)) } {
+  margin-right: 11px;
+}
+
+#{ bem-element(Panel, toggle, primary, bem-block(Icon)) } {
+  fill: #7b7b7b;
+  color: #000;
+}
+
+#{ bem-element(Panel, toggle, secondary, bem-block(Icon)) } {
+  @include helios-icon-colors(default);
+}
+
+#{ bem-element(Panel, title) } {
+  flex: 1;
+  margin: 0;
+  white-space: nowrap;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: 0.38px;
+}
+
+#{ bem-element(Panel, title, primary) } {
+  font-size: 22px;
+  line-height: 28px;
+  letter-spacing: 0.49px;
+  color: #000;
+}
+
+#{ bem-element(Panel, title, secondary) } {
+  font-size: 17px;
+  line-height: 22px;
+  letter-spacing: 0.38px;
+  color: #b8b8b8;
+}
+
+#{ bem-element(Panel, actions) } {
+  @include transition(opacity, .1s, ease-in);
+  @include flex(row, center);
+  opacity: 1;
+}
+
+#{ bem-element(Panel, actions, hidden) } {
+  opacity: 0;
+}
+
+#{ bem-element(Panel, contentTransition) } {
+  overflow: hidden;
+}
+
+#{ bem-element(Panel, contentTransitionEnter) } {
+  opacity: 0;
+  transform: translate3d(0, -100%, 0);
+}
+
+#{ bem-element(Panel, contentTransitionEnterActive) } {
+  @include transition(opacity transform, .2s);
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+#{ bem-element(Panel, contentTransitionExit) } {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+#{ bem-element(Panel, contentTransitionExitActive) } {
+  @include transition(opacity transform, .2s);
+  opacity: 0;
+  transform: translate3d(0, -100%, 0);
+}

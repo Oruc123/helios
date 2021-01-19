@@ -1,0 +1,15 @@
+@import "styles/bem.scss";
+
+#{ bem-block(Story) } {
+  background-color: #f9f9f9;
+  padding: 20px;
+}
+
+#{ bem-element(Story, 'title') } {
+  font-size: 2em;
+  font-weight: 600;
+  line-height: 2;
+  margin-top: 16px;
+  margin-bottom: 32px;
+  border-bottom: 2px solid #ccc;
+}

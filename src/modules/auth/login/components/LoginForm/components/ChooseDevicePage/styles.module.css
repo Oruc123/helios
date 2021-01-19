@@ -1,0 +1,9 @@
+.submit {
+    overflow: hidden;
+}
+
+.hint {
+    color: #fff;
+    margin-bottom: 1rem;
+    display: block;
+}

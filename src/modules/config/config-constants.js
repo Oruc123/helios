@@ -1,0 +1,5 @@
+export const CONFIG_STATE = 'config';
+
+export const CONFIG_LOAD = 'CONFIG_LOAD';
+export const CONFIG_LOAD_SUCCESS = 'CONFIG_LOAD_SUCCESS';
+export const CONFIG_LOAD_FAILURE = 'CONFIG_LOAD_FAILURE';

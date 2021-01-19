@@ -1,0 +1,58 @@
+@import "styles/variables";
+
+.submit {
+  margin-top: 20px;
+}
+
+.hint {
+  font-size: 14px;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.35;
+  letter-spacing: 0.44px;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+.hint b {
+  font-weight: 600;
+  display: block;
+}
+
+.switcher {
+  display: flex;
+  align-items: center;
+  margin: 28px 0 21px 0;
+}
+
+.switcher button {
+  margin-right: 14px;
+  border-color: var(--color-white) !important;
+  color: var(--color-white) !important;
+  padding: 0 30px !important;
+  font-weight: normal;
+  transition: all .5s ease-in-out;
+}
+
+.switcherTotp {
+  margin-bottom: 22px;
+  transition: all .5s ease-in-out;
+}
+
+button.chosen, .switcher button:hover {
+  background-color: var(--color-white) !important;
+  color: #000 !important;
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.06);
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.resetLink {
+  color: var(--color-white) !important;
+  text-decoration: none !important;
+  font-weight: 400;
+}

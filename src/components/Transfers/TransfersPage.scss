@@ -1,0 +1,21 @@
+@import "styles/bem.scss";
+@import "styles/variables.scss";
+@import "styles/mixins.scss";
+
+#{ bem-block(TransfersPage) } {
+}
+
+#{ bem-element(TransfersPage, search, null, bem-block(InputText)) } {
+}
+
+#{ bem-element(TransfersPage, clear, null, bem-block(Button, link, bem-block(Sized, medium))) } {
+  min-width: auto;
+  padding: 0;
+  height: auto;
+  font-size: 12px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.27px;
+}

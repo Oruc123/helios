@@ -1,0 +1,17 @@
+@import "styles/bem.scss";
+@import "styles/variables.scss";
+@import "styles/mixins.scss";
+
+#{ bem-block(Layer) } {
+  overflow: hidden;
+  background-color: #fff;
+  min-width: 996px;
+}
+
+#{ bem-block(Layer, rounded) } {
+  border-radius: 8px;
+}
+
+#{ bem-block(Layer, shadowed) } {
+  box-shadow: 0 7px 21px 0 rgba(0, 0, 0, 0.11);
+}

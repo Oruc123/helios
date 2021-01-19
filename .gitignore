@@ -1,0 +1,26 @@
+## external dependencies
+**/node_modules
+**/vendor
+
+## build artifacts
+/build
+
+## test artifacts
+coverage/
+
+## storybook artifacts
+storybook-static/
+
+## common annoying files
+**/yarn-error.log
+**/npm-debug.log
+**/.DS_Store
+**/.vscode
+**/.cache
+
+## project-specific ignored files
+.env
+.idea/
+docker-compose.override.yml
+
+src/sprites/Backup_*.cdr

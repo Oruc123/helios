@@ -1,0 +1,24 @@
+@import "styles/bem.scss";
+@import "styles/variables.scss";
+@import "styles/mixins.scss";
+
+#{ bem-block(Confirm) } {
+  max-width: 450px;
+  padding: 0 96px;
+}
+
+#{ bem-element(Confirm, message) } {
+  font-size: 18px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.4;
+  letter-spacing: normal;
+  text-align: center;
+  color: #000000;
+}
+
+#{ bem-element(Confirm, buttons) } {
+  margin-top: 40px;
+  justify-content: center;
+}

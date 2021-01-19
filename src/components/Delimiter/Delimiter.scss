@@ -1,0 +1,19 @@
+@import "styles/bem.scss";
+@import "styles/variables.scss";
+@import "styles/mixins.scss";
+
+#{ bem-block(Delimiter) } {
+  background-color: #e2e2e2;
+}
+
+#{ bem-block(Delimiter, null, bem-block(Sized, small)) } {
+  height: 1px;
+}
+
+#{ bem-block(Delimiter, null, bem-block(Sized, medium)) } {
+  height: 2px;
+}
+
+#{ bem-block(Delimiter, null, bem-block(Sized, large)) } {
+  height: 4px;
+}

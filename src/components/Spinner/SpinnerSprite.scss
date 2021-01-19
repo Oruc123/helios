@@ -1,0 +1,8 @@
+@import "styles/bem.scss";
+@import "styles/mixins.scss";
+@import "styles/variables.scss";
+@import "./Spinner.scss";
+
+#{ bem-block(SpinnerSprite) } {
+  animation: helios-spinner-keyframes $spinner-animation-duration infinite linear;
+}

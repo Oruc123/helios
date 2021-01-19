@@ -1,0 +1,120 @@
+@import "styles/bem.scss";
+@import "styles/variables.scss";
+@import "styles/mixins.scss";
+
+$check-mark-size-small: 16px !default;
+$check-mark-size-medium: 20px !default;
+$check-mark-size-large: 24px !default;
+
+#{ bem-block(CheckMark) } {
+  @include position(relative, $width: $check-mark-size-medium, $height: $check-mark-size-medium);
+  @include transition(background-color border-color, .1s, ease-in);
+
+  display: inline-block;
+  border: solid 2px #868686;
+  border-radius: 4px;
+}
+
+#{ bem-block(CheckMark, null, bem-block(Sized, small)) } {
+  width: $check-mark-size-small;
+  height: $check-mark-size-small;
+  border-width: 1px;
+}
+
+#{ bem-block(CheckMark, null, bem-block(Sized, large)) } {
+  width: $check-mark-size-large;
+  height: $check-mark-size-large;
+}
+
+
+#{ bem-block(CheckMark, rounded) } {
+  border-radius: $check-mark-size-medium / 2;
+}
+
+#{ bem-block(CheckMark, flat) } {
+  background-color: #868686;
+}
+
+#{ bem-block(CheckMark, flat checked) } {
+  border-color: #868686;
+  background-color: #868686;
+}
+
+#{ bem-block(CheckMark, default) } {
+  border-color: #e2e2e2;
+}
+
+#{ bem-block(CheckMark, default flat) } {
+  background-color: #e2e2e2;
+}
+
+#{ bem-block(CheckMark, default flat checked) } {
+  border-color: #e2e2e2;
+  background-color: #e2e2e2;
+}
+
+#{ bem-block(CheckMark, active) } {
+  border-color: #00c698;
+}
+
+#{ bem-block(CheckMark, active flat) } {
+  background-color: #00c698;
+}
+
+#{ bem-block(CheckMark, active flat checked) } {
+  border-color: #00c698;
+  background-color: #00c698;
+}
+
+#{ bem-block(CheckMark, danger) } {
+  border-color: #cc1f1f;
+}
+
+#{ bem-block(CheckMark, danger flat) } {
+  background-color: #cc1f1f;
+}
+
+#{ bem-block(CheckMark, danger flat checked) } {
+  border-color: #cc1f1f;
+  background-color: #cc1f1f;
+}
+
+#{ bem-element(CheckMark, check) } {
+  @include position(absolute, 0, 0, 0, 0);
+  @include transition(transform, .1s, ease-in);
+
+  transform: scale(0);
+  fill: #868686;
+}
+
+#{ bem-element(CheckMark, check, checked) } {
+  transform: scale(1);
+}
+
+#{ bem-element(CheckMark, check, flat) } {
+  fill: #fff;
+}
+
+#{ bem-element(CheckMark, check, default) } {
+  fill: #e2e2e2;
+}
+
+#{ bem-element(CheckMark, check, default flat) } {
+  fill: #fff;
+}
+
+#{ bem-element(CheckMark, check, active) } {
+  fill: #00c698;
+}
+
+#{ bem-element(CheckMark, check, active flat) } {
+  fill: #fff;
+}
+
+#{ bem-element(CheckMark, check, danger) } {
+  fill: #cc1f1f;
+}
+
+#{ bem-element(CheckMark, check, danger flat) } {
+  fill: #fff;
+}

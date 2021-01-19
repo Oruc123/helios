@@ -1,0 +1,32 @@
+@import "styles/bem.scss";
+@import "styles/mixins.scss";
+@import "styles/variables.scss";
+
+$info-label-font-size: 12px;
+$info-label-font-weight: 600;
+$info-label-font-style: normal;
+$info-label-line-height: 15px;
+$info-label-color: #b8b8b8;
+
+#{ bem-block(Info) } {
+  position: relative;
+  padding-bottom: 32px;
+}
+
+#{ bem-block(Info, label) } {
+  padding-top: 31px;
+}
+
+#{ bem-element(Info, label) } {
+  @include position(absolute, 0, 0);
+
+  font-size: $info-label-font-size;
+  font-weight: $info-label-font-weight;
+  font-style: $info-label-font-style;
+  font-stretch: normal;
+  line-height: $info-label-line-height;
+  letter-spacing: normal;
+  color: $info-label-color;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

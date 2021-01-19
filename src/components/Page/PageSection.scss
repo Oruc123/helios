@@ -1,0 +1,44 @@
+@import "styles/bem.scss";
+@import "styles/mixins.scss";
+@import "styles/variables.scss";
+
+#{ bem-block(PageSection) } {
+}
+
+#{ bem-block(PageSection, primary) } {
+  margin-bottom: 70px;
+  border-top: 2px solid #e2e2e2;
+}
+
+#{ bem-block(PageSection, secondary) } {
+  margin-bottom: 50px;
+}
+
+#{ bem-element(PageSection, header) } {
+  @include flex(row, center);
+  height: 72px;
+}
+
+#{ bem-element(PageSection, title) } {
+  flex: 1;
+  margin: 0;
+  padding: 0;
+  font-size: 22px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 28px;
+  letter-spacing: 0.49px;
+  color: #000000;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+#{ bem-element(PageSection, actions) } {
+  @include flex(row, center);
+  margin-left: 20px;
+}
+
+
+#{ bem-element(PageSection, content) } {
+}

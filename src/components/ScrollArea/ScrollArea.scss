@@ -1,0 +1,186 @@
+@import "mixins";
+
+$scroll-bar-size: 10px !default;
+$scroll-handle-size: 6px !default;
+$scroll-handle-color: rgba(96, 96, 96, 0.5);
+
+$scroll-handle-offset: ($scroll-bar-size - $scroll-handle-size) / 2;
+
+.scroll-bar {
+    position: absolute;
+    box-sizing: border-box;
+
+    &__bar {
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+    }
+
+    &__icon {
+        display: block;
+        position: absolute;
+        width: $scroll-handle-size;
+        height: $scroll-handle-size;
+        color: $scroll-handle-color;
+
+        &:hover {
+            color: #fff;
+        }
+
+        &:after {
+            content: "";
+            position: absolute;
+            border: $scroll-handle-size / 2 solid transparent;
+        }
+    }
+
+    &_vertical {
+        top: 0;
+        bottom: 0;
+        width: $scroll-bar-size;
+        right: 0;
+
+        .scroll-handle {
+            top: 0;
+            right: $scroll-handle-offset;
+        }
+
+        .scroll-bar__bar {
+            top: $scroll-bar-size;
+            bottom: $scroll-bar-size;
+        }
+
+        .scroll-bar__icon {
+            right: ($scroll-bar-size - $scroll-handle-size) / 2;
+
+            &_prev {
+                top: $scroll-handle-offset;
+                &:after {
+                    border-bottom-color: currentColor;
+                }
+            }
+            &_next {
+                bottom: $scroll-handle-offset;
+                &:after {
+                    border-top-color: currentColor;
+                }
+            }
+        }
+    }
+
+    &_horizontal {
+        left: 0;
+        right: 0;
+        height: $scroll-bar-size;
+        bottom: 0;
+
+        .scroll-handle {
+            left: 0;
+            bottom: $scroll-handle-offset;
+        }
+
+        .scroll-bar__bar {
+            left: $scroll-bar-size;
+            right: $scroll-bar-size;
+        }
+
+        .scroll-bar__icon {
+            bottom: $scroll-handle-offset;
+
+            &_prev {
+                left: $scroll-handle-offset;
+                &:after {
+                    border-right-color: currentColor;
+                }
+            }
+            &_next {
+                right: $scroll-handle-offset;
+                &:after {
+                    border-left-color: currentColor;
+                }
+            }
+        }
+    }
+}
+
+.scroll-handle {
+    position: absolute;
+    border-radius: 3px;
+    background: $scroll-handle-color;
+    width: $scroll-handle-size;
+    height: $scroll-handle-size;
+    border-radius: $scroll-handle-size / 2;
+    min-width: 5px;
+    min-height: 5px;
+}
+
+.scroll-area {
+    @include flex(column, stretch, $justify-content: stretch);
+
+    position: relative;
+    overflow: hidden;
+
+    &__inner {
+        overflow: scroll;
+        margin-right: -20px;
+        margin-bottom: -20px;
+    }
+
+    &__content {
+        display: inline-block;
+        vertical-align: middle;
+        box-sizing: border-box;
+    }
+}
+
+.scroll-area_horizontal.scroll-area_vertical {
+    .scroll-bar__icon {
+        &_next {
+            &:after {
+                border-color: currentColor;
+            }
+        }
+    }
+}
+
+.scroll-bar {
+    &__icon {
+        display: none;
+    }
+
+    &_vertical {
+        .scroll-bar__bar {
+            top: $scroll-handle-offset;
+            bottom: $scroll-handle-offset;
+        }
+    }
+
+    &_horizont,al {
+        .scroll-bar__bar {
+            left: $scroll-handle-offset;
+            right: $scroll-handle-offset;
+        }
+    }
+}
+
+.scroll-area_horizontal.scroll-area_vertical {
+    .scroll-bar {
+        &_vertical {
+            .scroll-bar__bar {
+                bottom: $scroll-bar-size;
+            }
+        }
+
+        &_horizontal {
+            .scroll-bar__bar {
+                right: $scroll-bar-size;
+            }
+        }
+    }
+}
+
+body.scrolling {
+    pointer-events: none;
+}

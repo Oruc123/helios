@@ -1,0 +1,73 @@
+@import "styles/bem.scss";
+@import "styles/variables.scss";
+@import "styles/mixins.scss";
+@import "variables.scss";
+
+@-webkit-keyframes -text-input-text-keyframes-autofill {
+  to {
+    background-color: transparent;
+    color: var(--input-autocomplete-color);
+    font-size: $input-font-size;
+  }
+}
+
+@mixin -text-input-text-autofill() {
+  // @magic This fixes some problems with autocompletes on webkit
+  &:-webkit-autofill, &:-webkit-autofill:focus, &:-webkit-autofill:hover {
+    -webkit-animation-name: -text-input-text-keyframes-autofill;
+    -webkit-animation-fill-mode: both;
+  }
+}
+
+#{ bem-block(Input) } {
+  @include transition(color, .1s, ease-in);
+  --input-autocomplete-color: $input-color;
+
+  min-width: 0;
+  padding: $input-padding-top $input-padding-right $input-padding-bottom $input-padding-left;
+  border: none;
+  background: transparent;
+  font-size: $input-font-size;
+  line-height: 18px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  letter-spacing: normal;
+  color: $input-color;
+  outline: 0;
+
+  &::placeholder {
+    font-size: $input-font-size;
+    color: #bababa;
+  }
+
+  &:invalid {
+    box-shadow: none;
+  }
+
+  // @magic This fixes some problems with autocompletes on webkit
+  @include -text-input-text-autofill;
+}
+
+#{ bem-block(Input, disabled) } {
+  cursor: not-allowed;
+}
+
+#{ bem-block(Input, password) } {
+  font-family: monospace;
+  letter-spacing: 1px;
+
+  &::placeholder {
+    font-family: "Source Sans Pro", sans-serif;
+  }
+}
+
+#{ bem-block(Input, number) } {
+  -moz-appearance: textfield;
+
+  &::-webkit-inner-spin-button,
+  &::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
